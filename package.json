@@ -1,0 +1,39 @@
+{
+  "name": "pi-skills-sources",
+  "version": "0.1.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yinziyang/pi-skills-sources.git"
+  },
+  "type": "module",
+  "description": "为 Pi 技能补全显示来源，并按来源搜索。",
+  "keywords": [
+    "pi-package"
+  ],
+  "engines": {
+    "node": ">=22.18.0"
+  },
+  "pi": {
+    "extensions": [
+      "./index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "node --test *.test.ts",
+    "check": "tsc --noEmit",
+    "format": "prettier --write *.ts *.json README.md",
+    "format:check": "prettier --check *.ts *.json README.md"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "^1.5.2",
+    "@earendil-works/pi-tui": "^1.5.2"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.5.2",
+    "@earendil-works/pi-tui": "1.5.2",
+    "@types/node": "^26.0.0",
+    "prettier": "^3.8.0",
+    "typescript": "^6.0.0"
+  }
+}
